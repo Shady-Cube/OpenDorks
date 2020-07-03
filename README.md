@@ -3,7 +3,7 @@ OpenDorks is a open source Dork generator. It is currently in it's early beta ph
 be added in the future.
 
 # Download
-[Download binaries]()
+[Download binaries](https://www.file-upload.com/rmyfsabcbzn9)
 
 # Contact
 All my contacts are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
