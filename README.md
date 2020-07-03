@@ -6,7 +6,7 @@ be added in the future.
 [Download binaries]()
 
 # Contact
-All my contact are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
+All my contacts are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
 
 # Legal notice
 
