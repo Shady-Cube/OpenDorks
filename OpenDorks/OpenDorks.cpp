@@ -22,7 +22,7 @@ int GeneratedDorks = 0;
 
 void ChangeConsoleTitle()
 {
-    SetConsoleTitle(TEXT("OpenDorks | Beta 1.0 | Made by Shady-Cube")); // Please don't edit this
+    SetConsoleTitle(TEXT("OpenDorks | Beta 1.1 | Made by Shady-Cube")); // Please don't edit this
 }
 
 void ClearConsole()
