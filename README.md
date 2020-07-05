@@ -9,7 +9,7 @@ be added in the future.
 + Fixed major bug that wouldn't allow OpenDorks to start on some computers
 
 # Plans for next version
-+ Multi Threading
++ Speed up Dork creation process
 
 # Contact
 All my contacts are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
