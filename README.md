@@ -11,6 +11,10 @@ be added in the future.
 # Contact
 All my contacts are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
 
+# License
+
+OpenDorks is licensed under MIT
+
 # Legal notice
 
 This is for educational purposes only. I am not held reliable for anything illegal done with OpenDorks.
