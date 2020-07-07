@@ -4,7 +4,8 @@ be added in the future.
 
 # Download
 [Download binaries](https://www.file-upload.com/yvpycrgouify)  
-[Alternative download if file-upload.com is down again for some reason](https://direct-link.net/135551/OpenDorks)
+
+[Alternative download (This should only be used if the first link is not working)](https://direct-link.net/135551/OpenDorks)
 
 # Changelog Beta 1.2
 + Fixed minor bugs
