@@ -7,9 +7,9 @@ be added in the future.
 
 # Changelog Beta 1.2
 + Fixed minor bugs
-+ Made more consistent
++ Made User Interface more consistent
 + Slightly faster
-+ Added a timer which tells you how log generating your dorks took
++ Added a timer which tells you how long generating your dorks took
 + Fixed some typos
 
 # Plans for next version
