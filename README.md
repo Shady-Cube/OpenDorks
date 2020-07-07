@@ -3,13 +3,18 @@ OpenDorks is a open source Dork generator. It is currently in it's early beta ph
 be added in the future.
 
 # Download
-[Download binaries](https://www.file-upload.com/bt95tf6hsfri)
+[Download binaries](https://www.file-upload.com/yvpycrgouify)
 
-# Changelog Beta 1.1
-+ Fixed major bug that wouldn't allow OpenDorks to start on some computers
+# Changelog Beta 1.2
++ Fixed minor bugs
++ Made more consistent
++ Slightly faster
++ Added a timer which tells you how log generating your dorks took
++ Fixed some typos
 
 # Plans for next version
-+ Speed up Dork creation process
++ Add more dork types.
++ Add option to limit the amount of Dorks generated
 
 # Contact
 All my contacts are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
