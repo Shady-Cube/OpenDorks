@@ -1,5 +1,5 @@
 ﻿// This is the source code of OpenDorks
-// The current version is Beta.1.0
+// The current version is Beta.1.2
 // This tool is still in it's primitive state
 // New features will be added over time
 // If you find any bugs or have any suggestions please contact me. Here is my website with all my contacts: https://shady-cube.github.io/Official-Shady-Cube-Website/
@@ -10,19 +10,22 @@
 #include <fstream>
 #include <string>
 #include <shellapi.h>
+#include <ctime>
 
 using namespace std;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 string KeywordFile;
 string PagetypeFile;
-string PageFormatFile;
+string PageformatFile;
 string OutputFile;
 int GeneratedDorks = 0;
 
+#define CLOCKS_PER_SEC ((clock_t)1000)
+
 void ChangeConsoleTitle()
 {
-    SetConsoleTitle(TEXT("OpenDorks | Beta 1.1 | Made by Shady-Cube")); // Please don't edit this
+    SetConsoleTitle(TEXT("OpenDorks | Beta 1.2 | Made by Shady-Cube")); // Please don't edit this
 }
 
 void ClearConsole()
@@ -42,7 +45,7 @@ void WelcomeUser()
 ||O |||p |||e |||n |||D |||o |||r |||k |||s ||
 ||__|||__|||__|||__|||__|||__|||__|||__|||__||
 |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|)";
-    cout << "\n\nBeta 1.0 | Made by Shady-Cube \n";
+    cout << "\n\nBeta 1.2 | Made by Shady-Cube \n";
 }
 
 void PromptForKeywordFileName() // Get name of Keyword file
@@ -87,13 +90,13 @@ void PromptForPageTypeName() // Get name of PageType file
     file.close();
 }
 
-void PromptForPageFormatFileName() // Get name of PageFormat file
+void PromptForPageformatFileName() // Get name of PageFormat file
 {
-    cout << "Please type in the name of the Text file containing your PageFormats. Ex:\"PageFormats.txt\"> ";
-    cin >> PageFormatFile;
+    cout << "Please type in the name of the Text file containing your PageFormats. Ex:\"Pageformats.txt\"> ";
+    cin >> PageformatFile;
 
     fstream file; // Check if file can be read
-    file.open(PageFormatFile, ios::in);
+    file.open(PageformatFile, ios::in);
 
     if (!file)
     {
@@ -102,7 +105,7 @@ void PromptForPageFormatFileName() // Get name of PageFormat file
         cout << "Failed to load file.\n";
         cout << "Please try again.\n";
         SetConsoleTextAttribute(hConsole, 7);
-        PromptForPageFormatFileName(); // Try again
+        PromptForPageformatFileName(); // Try again
     }
 
     file.close();
@@ -129,18 +132,18 @@ void PromptForOutputFileName() // Get name of output file
     file.close();
 }
 
-void CreateDorks()
+void CreateSingleThreadDorks() // Might add multithread later, too stupid for that rn
 {
     // Create fstreams for all of the files
     fstream KeywordFileName;
     fstream PageTypesFileName;
-    fstream PageFormatFileName;
+    fstream PageformatFileName;
     fstream OutputFileName;
 
     // Open all files
     KeywordFileName.open(KeywordFile, ios::in);
     PageTypesFileName.open(PagetypeFile, ios::in);
-    PageFormatFileName.open(PageFormatFile, ios::in);
+    PageformatFileName.open(PageformatFile, ios::in);
     OutputFileName.open(OutputFile, ios::out);
 
     // P = phase
@@ -148,12 +151,19 @@ void CreateDorks()
     string DorkP2;
     string DorkP3;
 
+    // Create timer
+    clock_t start;
+    double duration;
+
+    // Start timer
+    start = clock();
+
     while (!KeywordFileName.eof()) // while there are still lines to read 
     {
         KeywordFileName >> DorkP1; // write to dork phase 1
-        while (!PageFormatFileName.eof()) // while there are still lines to read
+        while (!PageformatFileName.eof()) // while there are still lines to read
         {
-            PageFormatFileName >> DorkP2; // write to dork phase 2
+            PageformatFileName >> DorkP2; // write to dork phase 2
             while (!PageTypesFileName.eof()) // while there are still lines to read
             {
                 PageTypesFileName >> DorkP3; // write to dork phase 3
@@ -165,15 +175,18 @@ void CreateDorks()
             PageTypesFileName.close();
             PageTypesFileName.open(PagetypeFile, ios::in); // refresh file
         }
-        PageFormatFileName.close();
-        PageFormatFileName.open(PageFormatFile, ios::in); // refresh file
+        PageformatFileName.close();
+        PageformatFileName.open(PageformatFile, ios::in); // refresh file
     }
+    
+    // Print execution time to console
+    duration = (std::clock() - start) / (double)CLOCKS_PER_SEC; 
+    cout << "\n\nFinished in " << duration << " seconds";
 }
 
 void DorksCreatedMessage()
 {
-    cout << "\nFinished generating dorks!\n";
-    cout << "A total of: " << GeneratedDorks << " Dorks have been generated!\n";
+    cout << "\nA total of: " << GeneratedDorks << " Dorks have been generated!\n";
 }
 
 void AskToVisitWebsite() // Please don't edit this function
@@ -210,22 +223,21 @@ void AskToVisitWebsite() // Please don't edit this function
 
 void SendExitMessage()
 {
-    cout << "OpenDorks will automatically close after input\n";
+    cout << "\nOpenDorks will automatically close after input\n\n";
 }
 
 int main()
 {
-    // Calls all the functions in order
     ChangeConsoleTitle();
     WelcomeUser();
     WaitForUserInput();
     ClearConsole();
     PromptForKeywordFileName();
     PromptForPageTypeName();
-    PromptForPageFormatFileName();
+    PromptForPageformatFileName();
     PromptForOutputFileName();
     ClearConsole();
-    CreateDorks();
+    CreateSingleThreadDorks();
     DorksCreatedMessage();
     AskToVisitWebsite();
     ClearConsole();
