@@ -5,7 +5,7 @@ be added in the future.
 # Download
 [Download binaries](https://www.file-upload.com/yvpycrgouify)
 
-[Temporary Download while file-upload.com is down](https://anonfiles.com/F2O6C6E7o3/OpenDorks_Beta1_2_rar)
+[Temporary Download while file-upload.com is down](https://anonfiles.com/F2O6C6E7o3/OpenDorks_Beta1_2_rar) (whill be removed once the other download link works again)
 
 # Changelog Beta 1.2
 + Fixed minor bugs
