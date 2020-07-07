@@ -11,10 +11,12 @@ be added in the future.
 + Slightly faster
 + Added a timer which tells you how long generating your dorks took
 + Fixed some typos
+- Temporarely removed multi threading because of major bugs, will be added back in the future
 
 # Plans for next version
 + Add more dork types.
 + Add option to limit the amount of Dorks generated
++ Multi threading (this time without bugs)
 
 # Contact
 All my contacts are on my main website: https://shady-cube.github.io/Official-Shady-Cube-Website/
